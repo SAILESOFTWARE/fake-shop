@@ -20,7 +20,7 @@ jobs:
       - name: Construção e envio da Imagem Docker
         uses: docker/build-push-action@v6
         with:
-          contetxt: ./srv
+          contetxt: ./src
           push: true
           file: ./src/Dockerfile
           tags: |
