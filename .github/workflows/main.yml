@@ -24,8 +24,8 @@ jobs:
           push: true
           file: ./src/Dockerfile
           tags: |
-            eliasmedeiros37/fake-shop:latest
-            eliasmedeiros37/fake-shop:v${{ github.run_number }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/fake-shop:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/fake-shop:v${{ github.run_number }}
 
   cd:
     runs-on: ubuntu-latest
